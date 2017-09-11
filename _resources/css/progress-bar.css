@@ -1,0 +1,162 @@
+.goal-container {
+  width: 100%;
+  text-align: left;
+  padding: 0 10px 10px 10px;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+.goal1 {
+  padding-right: 10px;
+  color: #585858;
+  font-weight: normal;
+}
+.goal2 {
+  font-weight: bold;
+  font-size: 16px;
+  color: #13938e;
+}
+.loader-container {
+  height: 40px;
+  width: 100%;
+  position: relative;
+  background-color: transparent;
+  padding: 0;
+  /* next */
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#10242d+0,2c5c95+30,3d5087+100 */
+  background: #10242d;
+  /* Old browsers */
+  background: -moz-linear-gradient(left, #10242d 0%, #2c5c95 30%, #3d5087 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #10242d 0%, #2c5c95 30%, #3d5087 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #10242d 0%, #2c5c95 30%, #3d5087 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#10242d', endColorstr='#3d5087', GradientType=1);
+  /* IE6-9 */
+}
+@media (min-width: 992px) {
+  .loader-container {
+    width: 80%;
+  }
+  .goal-container {
+    float: right;
+    width: 20%;
+  }
+  .goal2 {
+    display: block;
+    clear: both;
+  }
+}
+.lines {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 0;
+}
+.lines ul {
+  padding: 0;
+  margin: 0;
+  padding: 10px 0;
+}
+.lines ul li {
+  width: 10%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: block;
+  float: left;
+  height: 20px;
+  box-shadow: inset 1px 0 rgba(255, 255, 255, 0.4);
+  text-align: left;
+  color: #fff;
+  font-size: 8px;
+}
+.lines ul li:first-child {
+  box-shadow: none;
+}
+.meter {
+  width: 0;
+  background: rgba(19, 147, 142, 0.55);
+  position: absolute;
+  height: 39px;
+  top: 0;
+  right: 0;
+  position: relative;
+}
+.meterload:after {
+  content: "%";
+}
+.donation,
+.meterload {
+  padding: 10px 5px;
+}
+.status {
+  top: 42px;
+  right: -21px;
+  background: #fff;
+  padding: 5px 10px;
+  color: #195486;
+  float: right;
+  min-width: 100px;
+  font-size: 12px;
+  position: relative;
+  background: #ffffff;
+  border: 2px solid #195486;
+  font-weight: bold;
+}
+.meter.leftmeter .status {
+  right: -100px;
+}
+.meter.leftmeter .status:after {
+  right: 90px;
+}
+.meter.leftmeter .status:before {
+  right: 88px;
+}
+.status:after,
+.status:before {
+  /* smoother transition */
+  transition-timing-function: ease-in;
+  transition: 0.15s;
+  bottom: 100%;
+  right: 0px;
+  left: auto;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+.status:after {
+  border-color: rgba(255, 255, 255, 0);
+  border-bottom-color: #ffffff;
+  border-width: 10px;
+  margin-left: -10px;
+  right: 10px;
+}
+.status:before {
+  border-color: rgba(25, 84, 134, 0);
+  border-bottom-color: #195486;
+  border-width: 12px;
+  margin-left: -14px;
+  right: 7px;
+}
+@keyframes loader {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0%;
+  }
+}
+@keyframes meter {
+  0% {
+    color: #5bd8ff;
+  }
+  100% {
+    color: #ff0000;
+  }
+}
